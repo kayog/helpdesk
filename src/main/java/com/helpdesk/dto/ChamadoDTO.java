@@ -7,6 +7,8 @@ import javax.validation.constraints.NotEmpty;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.helpdesk.domain.Chamado;
+import com.helpdesk.domain.enuns.Prioridade;
+import com.helpdesk.domain.enuns.Status;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -44,5 +46,12 @@ public class ChamadoDTO implements Serializable {
 		this.dataAbertura = obj.getDataAbertura();
 		this.dataFechamento = obj.getDataFechamento();
 	}
+	
+	public Status getStatus() {
+		return Status.toEnun(this.status);
+	}
 
+	public Prioridade getPrioridade() {
+		return Prioridade.toEnun(this.prioridade);
+	}
 }

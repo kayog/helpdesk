@@ -7,7 +7,6 @@ import java.util.Optional;
 import javax.validation.Valid;
 
 import com.helpdesk.domain.Chamado;
-import com.helpdesk.domain.enuns.Prioridade;
 import com.helpdesk.domain.enuns.Status;
 import com.helpdesk.dto.ChamadoDTO;
 import com.helpdesk.repository.ChamadoRepository;
@@ -64,8 +63,8 @@ public class ChamadoService {
 		
 		os.setId(dto.getId());
 		os.setObservacoes(dto.getObservacoes());
-		os.setPrioridade(Prioridade.toEnun(dto.getPrioridade()));
-		os.setStatus(Status.toEnun(dto.getStatus()));
+		os.setPrioridade(dto.getPrioridade());
+		os.setStatus(dto.getStatus());
 		os.setTecnico(tecnicoService.findById(dto.getTecnico()));
 		os.setCliente(clienteService.findById(dto.getCliente()));
 		
