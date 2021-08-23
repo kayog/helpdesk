@@ -40,9 +40,9 @@ public class DBService {
 		Cliente c5 = new Cliente(null, "Cliente 5", "597.728.470-51", "(65) 98888-8885");
 		Cliente c6 = new Cliente(null, "Cliente 6", "919.567.760-79", "(65) 98888-8886");
 		
-		Chamado o1 = new Chamado(Prioridade.ALTA, "Teste create OS 1", Status.ANDAMENTO, t1, c1);
-		Chamado o2 = new Chamado(Prioridade.ALTA, "Teste create OS 2", Status.ANDAMENTO, t2, c2);
-		Chamado o3 = new Chamado(Prioridade.ALTA, "Teste create OS 3", Status.ANDAMENTO, t3, c3);
+		Chamado o1 = new Chamado(Prioridade.ALTA, "Teste create OS 1", Status.ABERTO, t1, c1);
+		Chamado o2 = new Chamado(Prioridade.MEDIA, "Teste create OS 2", Status.ANDAMENTO, t2, c2);
+		Chamado o3 = new Chamado(Prioridade.BAIXA, "Teste create OS 3", Status.ENCERRADO, t3, c3);
 
 
 		t1.getListaOS().add(o1);
